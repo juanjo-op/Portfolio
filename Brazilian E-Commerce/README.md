@@ -19,17 +19,15 @@ in an interactive Power BI dashboard with 7 pages and 25+ visuals.
 
 ## Repository Structure
 
-\```
-Brazilian E-Commerce/
-├── notebooks/
-│   ├── BRNB_1_load_profile_tables.ipynb  # Data loading & profiling
-│   ├── BRNM_2_Cleaning_data.ipynb        # Data cleaning pipeline
-│   ├── BRNB_3_EDA.ipynb                  # Exploratory data analysis
-│   └── BRNB_4_Export.ipynb               # Export for Power BI
-├── clean_datasets/                        # Cleaned CSVs
-├── powerbi_datasets/                      # Star schema exports + .pbix
-└── olist_*_dataset.csv                   # Raw data (source: Kaggle)
-\```
+| Folder / File | Description |
+|---|---|
+| `BRNB_1_load_profile_tables.ipynb` | Data loading & profiling |
+| `BRNM_2_Cleaning_data.ipynb` | Data cleaning pipeline |
+| `BRNB_3_EDA.ipynb` | Exploratory data analysis |
+| `BRNB_4_Export.ipynb` | Export for Power BI |
+| `clean_datasets/` | Cleaned CSVs output from NB2 |
+| `powerbi_datasets/` | Star schema CSVs + Power BI `.pbix` file |
+| `olist_*_dataset.csv` | Raw data (source: Kaggle) |
 
 ## Data Pipeline
 
