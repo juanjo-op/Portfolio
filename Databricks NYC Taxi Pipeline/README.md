@@ -23,16 +23,18 @@ NYC Yellow Taxi Trip Records — January & February 2024
 Source: [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
 ## Project Structure
+```
 ├── notebooks/
 │   ├── 01_bronze_ingestion.py
 │   ├── 02_silver_transformation.py
 │   └── 03_gold_aggregations.py
 ├── data/
-│   ├── raw/        # Local Parquet files (not tracked by Git)
-│   └── sample/     # Small data samples for reference
+│   ├── raw/          # Local Parquet files (not tracked by Git)
+│   └── sample/       # Small data samples for reference
 ├── docs/
 │   └── architecture.png
 └── README.md
+```
 
 ## Status
 🚧 In progress
