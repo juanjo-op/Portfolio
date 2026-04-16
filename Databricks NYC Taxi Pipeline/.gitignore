@@ -1,0 +1,15 @@
+# Raw Data - Files too heavy to upload to GitHub
+data/raw/
+data/sample/*.parquet
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Databricks
+.databricks/
