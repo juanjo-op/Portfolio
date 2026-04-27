@@ -6,11 +6,23 @@ processing NYC Yellow Taxi trip data using the Medallion Architecture (Bronze �
 ## Architecture
 Raw Files (Parquet)
 ↓
-Bronze Layer  →  Raw data ingested as Delta Tables
+Bronze Layer  →  Raw ingestion as Delta Table (5.97M rows)
 ↓
-Silver Layer  →  Cleaned and transformed data
+Silver Layer  →  Cleaned and transformed data (5.44M rows)
 ↓
 Gold Layer    →  Aggregated data ready for analysis
+
+## Dashboard Preview
+
+![Dashboard Preview](docs/Dashboard_preview.png)
+
+## Key Findings
+
+- **Peak hour**: 6 PM with 398K trips — classic Manhattan rush hour
+- **Busiest day**: Thursday with 930K trips and highest revenue
+- **Early morning anomaly**: Hour 5 has the longest avg distance (10.3 miles) — likely airport runs
+- **January vs February**: Nearly identical volume (~2.72M trips each month)
+
 
 ## Tech Stack
 - Apache Spark / PySpark
@@ -22,6 +34,16 @@ Gold Layer    →  Aggregated data ready for analysis
 NYC Yellow Taxi Trip Records — January & February 2024  
 Source: [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
+## Pipeline Details
+
+| Layer  | Table | Rows | Description |
+|--------|-------|------|-------------|
+| Bronze | `bronze_yellow_taxi` | 5,972,150 | Raw Parquet ingestion |
+| Silver | `silver_yellow_taxi` | 5,443,409 | Cleaned + derived columns |
+| Gold | `gold_hourly_performance` | 24 | Aggregated by hour |
+| Gold | `gold_daily_performance` | 7 | Aggregated by day of week |
+| Gold | `gold_monthly_comparison` | 2 | January vs February |
+
 ## Project Structure
 ```
 ├── notebooks/
@@ -29,12 +51,12 @@ Source: [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc
 │   ├── 02_silver_transformation.py
 │   └── 03_gold_aggregations.py
 ├── data/
-│   ├── raw/          # Local Parquet files (not tracked by Git)
-│   └── sample/       # Small data samples for reference
+│   ├── raw/        # Local Parquet files (not tracked by Git)
+│   └── sample/
 ├── docs/
-│   └── architecture.png
+│   └── Dashboard_preview.png
 └── README.md
 ```
 
 ## Status
-🚧 In progress
+✅ Complete
