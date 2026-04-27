@@ -16,6 +16,16 @@ Gold Layer    →  Aggregated data ready for analysis
 
 ![Dashboard Preview](docs/Dashboard_preview.png)
 
+## Automated Pipeline
+
+The full pipeline runs as an automated Databricks Job with three sequential tasks:
+
+![Job Pipeline](docs/job_pipeline.png)
+
+- **Trigger:** Weekly scheduled run
+- **Duration:** ~2 minutes for full pipeline execution
+- **Orchestration:** Task dependencies ensure Bronze → Silver → Gold order
+
 ## Key Findings
 
 - **Peak hour**: 6 PM with 398K trips — classic Manhattan rush hour
@@ -29,6 +39,7 @@ Gold Layer    →  Aggregated data ready for analysis
 - Delta Lake
 - Databricks Community Edition
 - Python 3
+- Databricks Jobs (workflow orchestration)
 
 ## Dataset
 NYC Yellow Taxi Trip Records — January & February 2024  
@@ -54,7 +65,8 @@ Source: [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc
 │   ├── raw/        # Local Parquet files (not tracked by Git)
 │   └── sample/
 ├── docs/
-│   └── Dashboard_preview.png
+    ├── Dashboard_preview.png        # Local Parquet files (not tracked by Git)
+│   └── job_pipeline.png
 └── README.md
 ```
 
