@@ -1,7 +1,16 @@
-# NYC Taxi Pipeline — Databricks Data Engineering Project
+## 🔷 NYC Taxi Pipeline — Databricks Data Engineering
 
-End-to-end data engineering pipeline built on Databricks Community Edition,
-processing NYC Yellow Taxi trip data using the Medallion Architecture (Bronze → Silver → Gold).
+**Tools:** PySpark · Delta Lake · Databricks · Unity Catalog · Python
+
+End-to-end data engineering pipeline processing ~6M NYC Yellow Taxi trip records 
+using the Medallion Architecture (Bronze → Silver → Gold) on Databricks Community Edition.
+
+**Key skills demonstrated:**
+- Medallion Architecture (Bronze / Silver / Gold layers)
+- Delta Lake: ACID transactions, Time Travel, VACUUM
+- PySpark transformations at scale (~6M rows)
+- Automated pipeline orchestration with Databricks Jobs
+- SQL analytics and dashboard visualization
 
 ## Architecture
 Raw Files (Parquet)
@@ -40,6 +49,7 @@ The full pipeline runs as an automated Databricks Job with three sequential task
 - Databricks Community Edition
 - Python 3
 - Databricks Jobs (workflow orchestration)
+- Delta Lake Time Travel & VACUUM
 
 ## Dataset
 NYC Yellow Taxi Trip Records — January & February 2024  
@@ -60,7 +70,8 @@ Source: [NYC Taxi & Limousine Commission](https://www.nyc.gov/site/tlc/about/tlc
 ├── notebooks/
 │   ├── 01_bronze_ingestion.py
 │   ├── 02_silver_transformation.py
-│   └── 03_gold_aggregations.py
+│   ├── 03_gold_aggregations.py
+│   └── 04_delta_time_travel.py
 ├── data/
 │   ├── raw/        # Local Parquet files (not tracked by Git)
 │   └── sample/
