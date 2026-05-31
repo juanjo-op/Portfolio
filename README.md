@@ -42,10 +42,30 @@ and business-driven exploratory queries.
 
 ---
 
+### ⚡ NYC Taxi Pipeline — Databricks Data Engineering
+**Tools:** Apache Spark · PySpark · Delta Lake · Databricks · Python
+
+End-to-end data engineering pipeline built on Databricks Community Edition, 
+processing 5.97M NYC Yellow Taxi trip records using the Medallion Architecture 
+(Bronze → Silver → Gold).
+
+**Key skills demonstrated:**
+- Medallion Architecture implementation (Bronze, Silver, Gold layers)
+- PySpark transformations and aggregations at scale
+- Delta Lake for ACID transactions and time travel
+- Databricks Jobs for pipeline orchestration
+- Data quality validation and cleaning (8.9% invalid records removed)
+- Gold layer aggregations for business analytics
+
+📁 [View project](./Databricks%20NYC%20Taxi%20Pipeline/)
+
+---
+
 ## About Me
 
-Data analyst with experience in Python, SQL, and Power BI. 
-Focused on building clean, well-documented analytical pipelines 
-that translate raw data into actionable insights.
+Data analyst transitioning into Data Engineering, with hands-on experience 
+in Python, SQL, PySpark, and Databricks. Focused on building clean, 
+well-documented data pipelines using modern tools like Delta Lake and 
+the Medallion Architecture.
 
 📧 Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/juan-jose-ortiz-p)
